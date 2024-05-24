@@ -27,4 +27,4 @@ sxstatus &
 ```
 
 >[!IMPORTANT]
-> Adding <b>update</b> module will increase cpu usage.
+> Adding <b>package</b> and <b>update</b> module will increase cpu usage.
