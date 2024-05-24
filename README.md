@@ -26,3 +26,5 @@ Put sxstatus on your startup file, for example in .xsessionrc:
 sxstatus &
 ```
 
+>[!IMPORTANT]
+> Adding <b>update</b> module will increase cpu usage.
