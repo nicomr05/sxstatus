@@ -13,6 +13,10 @@ then go to sxstatus directory:
 ```
 cd sxstatus/
 ```
+change file permission on the modules:
+```
+sudo chmod 755 -R modules/
+```
 run this command to start the installation:
 ```
 make
