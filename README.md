@@ -1,7 +1,7 @@
 # sxstatus 💬
 sxstatus <i>(shell xs status)</i> is a very simple status bar for dynamic window manager
 
-![sxstatus](https://github.com/diws1/sxstatus/blob/main/screenshots/sxstatus.png)\
+![sxstatus](https://github.com/diws1/sxstatus/blob/main/screenshots/sxstatus.png)
 
 you can also customize sxstatus using <b>sxstatus-theme</b> in this [repository](https://github.com/diws1/sxstatus-theme)
 
