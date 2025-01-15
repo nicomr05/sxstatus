@@ -1,6 +1,6 @@
 #!/bin/bash
 
-Icon=""
+Icon="Up:"
 
 Check=$(uptime -p | awk '{print $5}')
 # under 24 hours
