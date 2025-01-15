@@ -1,0 +1,18 @@
+#!/bin/bash
+
+Icon=""
+
+Check=$(uptime -p | awk '{print $5}')
+# under 24 hours
+Uptime1=$(uptime -p | sed 's/up //')
+# more than 24 hours
+Uptime2=$(uptime -p | sed 's/up //' | cut -d ',' -f 1,2)
+
+if [ "$Check" = "day," ] ; then
+	echo " $Icon $Uptime2 "
+elif [ "$Check" = "week," ] ; then 
+	echo " $Icon $Uptime2 "	
+else
+	echo " $Icon $Uptime1 "
+fi
+
