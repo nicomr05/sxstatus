@@ -8,9 +8,11 @@ Uptime1=$(uptime -p | sed 's/up //')
 # more than 24 hours
 Uptime2=$(uptime -p | sed 's/up //' | cut -d ',' -f 1,2)
 
-if [ "$Check" = "day," ] ; then
+if [ "$Check" = "hours," ] ; then	#more than 1 day
 	echo " $Icon $Uptime2 "
-elif [ "$Check" = "week," ] ; then 
+elif [ "$Check" = "day," ] ; then	#more than 1 week
+	echo " $Icon $Uptime2 "
+elif [ "$Check" = "week," ] ; then 	#more than 1 month
 	echo " $Icon $Uptime2 "	
 else
 	echo " $Icon $Uptime1 "
