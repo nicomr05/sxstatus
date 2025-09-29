@@ -2,7 +2,6 @@
 
 Icon="Upd:"
 
-Update=$(apt list --upgradable 2>/dev/null | wc -l)
+Update=$(apt list --upgradable 2>/dev/null | sed '$ d' | wc -l)
 
 echo "$Icon $Update"
-

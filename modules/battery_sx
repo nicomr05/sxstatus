@@ -1,18 +1,22 @@
 #!/bin/bash
 
-#Icon1=""      #good
-#Icon2=""      #mid
-#Icon3=""      #low
-Icon="Bat:"
+IconHigh="Bat[♦]:"     #good
+IconMid="Bat[*]:"      #mid
+IconLow="Bat[!]:"      #low
+#Icon="Bat:"
 
 Battery=$(cat /sys/class/power_supply/BAT0/capacity)
-Midle="70"
+Middle="60"
 Low="20"
 
-if [ "$Battery" -le "$Low" ] ; then
-        echo "$Icon $Battery%"
-elif [ "$Battery" -le "$Midle" ] ; then
-        echo "$Icon $Battery%"
+if [ $(systemd-ac-power -v) == "yes" ]; then
+  Battery="(⚡)$Battery"
+fi
+
+if [ "$Battery" -le "$Low" ]; then
+		echo "$IconLow $Battery%"
+elif [ "$Battery" -le "$Middle" ]; then
+		echo "$IconMid $Battery%"
 else
-        echo "$Icon $Battery%"
+		echo "$IconHigh $Battery%"
 fi

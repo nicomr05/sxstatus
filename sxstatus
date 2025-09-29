@@ -3,6 +3,6 @@
 export PATH="${PATH}:$HOME/.config/sxstatus/modules"
 
 while true; do
-        xsetroot -name "$(mpdstat_sx)  $(memory_sx) $(battery_sx) $(volume_sx) $(clock_sx)"
-        sleep 2
+  xsetroot -name "$(battery_sx) | $(memory_sx) | $(volume_sx) | $(clock_sx) | ☸ "
+  sleep 1
 done

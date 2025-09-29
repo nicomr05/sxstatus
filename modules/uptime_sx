@@ -17,4 +17,3 @@ elif [ "$Check" = "week," ] ; then 	#more than 1 month
 else
 	echo " $Icon $Uptime1 "
 fi
-

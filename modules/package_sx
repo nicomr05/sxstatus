@@ -5,4 +5,3 @@ Icon="Pkg:"
 Package=$(dpkg-query -f '${binary:Package}\n' -W | wc -l)
 
 echo "$Icon $Package"
-

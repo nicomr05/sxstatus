@@ -1,5 +1,12 @@
 #!/bin/bash
 
-date '+%a %b %d %Y %r'
+Hour=$(date "%R")
+Icon="g"
 
+if [ $Hour -le "12:00" ]; then
+  Icon="☽"
+elif [ $Hour -le "00:00" ]; then
+  Icon="☼"
+fi
 
+date "+%a %d %b %Y %R"
