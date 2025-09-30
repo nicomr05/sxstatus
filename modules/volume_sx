@@ -2,7 +2,7 @@
 
 Icon="Vol:"
 
-if [ -z $(amixer get Master | grep Left | awk '/off/ {print $6}') ]; then
+if [ $(amixer get Master | grep Left | awk '/off/ {print $6}') == "[off]" ]; then
   Volume="Muted"
 else
   Volume=$(wpctl get-volume @DEFAULT_AUDIO_SINK@ | awk '{ print $2*100"%" }')
