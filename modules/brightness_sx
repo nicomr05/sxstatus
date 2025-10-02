@@ -1,0 +1,6 @@
+#!/bin/bash
+
+Icon="Bri:"
+Level=$(bc -l <<< "scale=0; $(brightnessctl g) / 120000 * 100")
+
+echo "$Icon $Level%"
